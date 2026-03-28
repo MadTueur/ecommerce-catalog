@@ -1,5 +1,8 @@
 <template>
   <ProductDisplay />
+  <div>
+    <button @click="nextProduct()">Next Product</button>
+  </div>
 </template>
 
 <script>
@@ -15,6 +18,28 @@ export default {
       productIndex: 1,
       product: null,
     };
+  },
+  methods: {
+    nextProduct() {
+      this.productIndex++;
+      if (this.productIndex > 20) {
+        this.productIndex = 1;
+      }
+      this.fetchProduct();
+    },
+    fetchProduct() {
+      fetch(`https://fakestoreapi.com/products/${this.productIndex}`)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          if (
+            data.category === "men's clothing" ||
+            data.category === "women's clothing"
+          ) {
+            this.product = data;
+          }
+        });
+    },
   },
 };
 </script>
