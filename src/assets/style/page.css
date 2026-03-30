@@ -1,0 +1,51 @@
+:root {
+  --blue-dark: #002772;
+  --carbon-black: #1e1e1e;
+  --royal-plum: #720060;
+  --lavender: #dbe6ff;
+  --gunmetal: #3f3f3f;
+  --alabaster-grey: #dcdcdc;
+  --white: #ffffff;
+  --lavender-veil: #fde2ff;
+}
+
+.men-section {
+  background-color: var(--lavender);
+}
+
+.women-section {
+  background-color: var(--lavender-veil);
+}
+
+.unavailable {
+  background-color: var(--alabaster-grey);
+  width: 100%;
+  height: 100vh;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--white);
+  display: flex;
+  padding: 20px;
+  border-radius: 10px;
+  width: 700px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.card img {
+  width: 250px;
+  object-fit: contain;
+}

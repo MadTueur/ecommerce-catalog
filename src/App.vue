@@ -1,7 +1,15 @@
 <template>
-  <ProductDisplay />
   <div>
-    <button @click="nextProduct()">Next Product</button>
+    <ProductDisplay
+      v-if="product"
+      :product="product"
+      @next-product="nextProduct()"
+    />
+
+    <div v-else class="unavailable">
+      <button @click="nextProduct()">Next Product</button>
+      <p>This product is unavailable to show</p>
+    </div>
   </div>
 </template>
 
@@ -37,6 +45,8 @@ export default {
             data.category === "women's clothing"
           ) {
             this.product = data;
+          } else {
+            this.product = null;
           }
         });
     },
