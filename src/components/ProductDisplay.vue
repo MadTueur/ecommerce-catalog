@@ -9,16 +9,19 @@
     <div class="card">
       <img :src="product.image" />
       <div class="product-info">
-        <p>{{ product.title }}</p>
+        <p class="product-title">{{ product.title }}</p>
         <p>{{ product.category }}</p>
         <p>{{ product.rating.rate }}</p>
         <p>{{ product.description }}</p>
-        <p>${{ product.price }}</p>
-        <button>Buy Now</button>
-        <button @click="handleNext()">Next Product</button>
+        <p class="product-price">${{ product.price }}</p>
+        <button class="btn-buy">Buy Now</button>
+        <button class="btn-next" @click="handleNext()">Next Product</button>
       </div>
     </div>
   </div>
+
+  <button class="btn-buy">Buy Now</button>
+  <button class="btn-next" @click="handleNext()">Next Product</button>
 </template>
 
 <script>
