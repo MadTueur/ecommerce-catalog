@@ -23,6 +23,11 @@
   background-color: var(--lavender-veil);
 }
 
+.product-info p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 .men-section .product-info p {
   color: var(--blue-dark);
   text-align: left;
@@ -33,6 +38,15 @@
   text-align: left;
 }
 
+.men-section .btn-buy {
+  background-color: var(--blue-dark);
+}
+
+.men-section .btn-next {
+  color: var(--blue-dark);
+  border-color: var(--blue-dark);
+}
+
 .unavailable {
   background-color: var(--alabaster-grey);
   width: 100%;
@@ -41,6 +55,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--alabaster-grey);
+  margin: 10px 0;
+}
+
+.divider-bottom {
+  border: none;
+  border-top: 1px solid var(--alabaster-grey);
+  margin-top: auto;
+  margin-bottom: 10px;
 }
 
 .page {
@@ -56,7 +83,7 @@
   display: flex;
   padding: 20px;
   border-radius: 10px;
-  width: 700px;
+  width: 900px;
 }
 
 .product-info {
@@ -78,7 +105,7 @@
 }
 
 .card img {
-  width: 250px;
+  width: 350px;
   object-fit: contain;
 }
 
@@ -96,4 +123,58 @@
   border: 1px solid var(--royal-plum);
   padding: 10px 20px;
   cursor: pointer;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.btn-buy,
+.btn-next {
+  flex: 1;
+  border-radius: 10px;
+  border-width: 3px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+}
+
+.star {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--blue-dark);
+  background-color: transparent;
+}
+
+.women-section .star {
+  border: 2px solid var(--royal-plum);
+}
+
+.filled {
+  background-color: var(--blue-dark);
+}
+
+.women-section .filled {
+  background-color: var(--royal-plum);
+}
+
+.category-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.women-section .category-rating {
+  color: var(--royal-plum);
 }

@@ -24,7 +24,15 @@ export default {
   data() {
     return {
       productIndex: 1,
-      product: null,
+      product: {
+        title: "Mens Cotton Jacket",
+        category: "men's clothing",
+        description:
+          "Great outerwear jacket for Spring/Autumn/Winter Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+        price: 55.99,
+        image: "https://placehold.co/300x400",
+        rating: { rate: 4.7 },
+      },
     };
   },
   methods: {
