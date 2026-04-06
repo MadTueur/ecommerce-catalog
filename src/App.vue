@@ -8,7 +8,9 @@
 
     <div v-else class="unavailable">
       <p>This product is unavailable to show</p>
-      <button class="btn-next" @click="nextProduct()">Next Product</button>
+      <button class="btn-unavailable" @click="nextProduct()">
+        Next Product
+      </button>
     </div>
   </div>
 </template>
@@ -24,15 +26,7 @@ export default {
   data() {
     return {
       productIndex: 1,
-      product: {
-        title: "Mens Cotton Jacket",
-        category: "men's clothing",
-        description:
-          "Great outerwear jacket for Spring/Autumn/Winter Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        price: 55.99,
-        image: "https://placehold.co/300x400",
-        rating: { rate: 4.7 },
-      },
+      product: null,
     };
   },
   methods: {

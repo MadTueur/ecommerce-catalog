@@ -125,6 +125,15 @@
   cursor: pointer;
 }
 
+.btn-unavailable {
+  background-color: var(--white);
+  color: var(--gunmetal);
+  border: 1px solid var(--gunmetal);
+  padding: 10px 30px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 .btn-group {
   display: flex;
   gap: 10px;
