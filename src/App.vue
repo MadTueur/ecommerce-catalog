@@ -7,10 +7,13 @@
     />
 
     <div v-else class="unavailable">
-      <p>This product is unavailable to show</p>
-      <button class="btn-unavailable" @click="nextProduct()">
-        Next Product
-      </button>
+      <div class="unavailable-card">
+        <div class="unavailable-image"></div>
+        <p class="unavailable-text">This product is unavailable to show</p>
+        <button class="btn-unavailable" @click="nextProduct()">
+          Next Product
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -23,6 +26,22 @@ export default {
   components: {
     ProductDisplay,
   },
+  /*DATA DUMMY KETIKA API DOWN*/
+  /*data() {
+    return {
+      productIndex: 1,
+      product: {
+        title: "Mens Cotton Jacket",
+        category: "men's clothing",
+        description:
+          "Great outerwear jacket Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+        price: 55.99,
+        image: "https://placehold.co/300x400",
+        rating: { rate: 4.7 },
+      },
+    };
+  },*/
+  /*KETIKA API SUDAH NORMAL*/
   data() {
     return {
       productIndex: 1,
